@@ -7,28 +7,36 @@
     <link rel="stylesheet" href="/src/scss/styles.scss">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a href="/" class="navbar-brand">quicklint</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-xxl">
+        <a href="/" class="navbar-brand">quicklint</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a href="/xml" class="nav-link">XML</a></li>
-                    <li class="nav-item"><a href="/json" class="nav-link">JSON</a></li>
-                </ul>
-            </div>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a href="/xml/" class="nav-link">XML</a></li>
+                <li class="nav-item"><a href="/json/" class="nav-link">JSON</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <main class="container-fluid">
-        <h1>quicklint</h1>
-        <div class="container">
-        </div>
-    </main>
+<main class="container-xxl mb-3">
+    <h1>quicklint</h1>
 
-    <script type="module" src="/src/js/common.js"></script>
+    <p>quicklint currently supports the following languages:</p>
+    <ul>
+        <li><a href="/xml/">XML</a></li>
+    </ul>
+
+    <footer>
+        <p><a href="https://github.com/byemc/quicklint.dev">source code</a></p>
+    </footer>
+</main>
+
+<script type="module" src="/src/js/common.js"></script>
+
 </body>
 </html>
