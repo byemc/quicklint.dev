@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quicklint</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./scss/styles.scss">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-xxl">
+            <a href="/" class="navbar-brand">quicklint</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="/xml" class="nav-link">XML</a></li>
+                    <li class="nav-item"><a href="/json" class="nav-link">JSON</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container-xxl mb-3">
+        <h1>quick-XML-lint</h1>
+        <div class="row">
+            <div class="col mb-3">
+                <label for="xml-input" class="form-label">Input</label>
+                <textarea class="font-monospace form-control" autocomplete="off" autocapitalize="off" name="xml-input" id="xml-input" cols="30" rows="10"></textarea>
+            </div>
+            <div class="col mb-3">
+                <label for="xml-output" class="form-label">Output</label>
+                <textarea class="font-monospace form-control" readonly name="xml-output" id="xml-output" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+
+<!--            <div class="card mb-3">-->
+<!--                <div class="card-header">-->
+<!--                    <i class="bi bi-gear-wide-connected"></i>-->
+<!--                    Options-->
+<!--                </div>-->
+<!--                <div class="card-body">-->
+<!--                    <div class="row">-->
+<!--                        <div class="col row">-->
+<!--                            <div class="form-label">Indent type:</div>-->
+<!--                            <div class="col-auto mb-3">-->
+<!--                                <div class="form-check-inline">-->
+<!--                                    <input type="radio" name="indentType" id="indentTypeTabs" class="form-check-input" autocomplete="off" checked />-->
+<!--                                    <label for="indentTypeTabs" class="form-check-label">Tabs</label>-->
+<!--                                </div>-->
+<!--                                <div class="form-check-inline">-->
+<!--                                    <input type="radio" name="indentType" id="indentTypeSpaces" class="form-check-input" autocomplete="off" />-->
+<!--                                    <label for="indentTypeSpaces" class="form-check-label">Spaces</label>-->
+<!--                                </div>-->
+<!--                                <div class="mb-3">-->
+<!--                                    <label for="indentSpacesNumber">Number of spaces</label>-->
+<!--                                    <input type="number" name="indentSpacesNumber" value="0" id="indentSpacesNumber" class="form-control">-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+        <footer>
+            <p>Using <a href="https://www.npmjs.com/package/xml-formatter"><code>xml-formatter</code></a>, licensed under MIT.</p>
+            <p><a href="https://github.com/byemc/quicklint">source code</a></p>
+        </footer>
+    </main>
+
+    <script type="module" src="./js/common.js"></script>
+    <script type="module" src="./js/xml.js"></script>
+</body>
+</html>
