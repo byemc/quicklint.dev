@@ -104,6 +104,7 @@ document.getElementById("collapseContentSwitch").onchange = setSettings;
 document.getElementById("whiteSpaceAtEndOfSelfClosingTagSwitch").onchange = setSettings;
 document.getElementById("forceSelfClosingEmptyTagSwitch").onchange = setSettings;
 
+
 getSettings();
 
 // Functions
@@ -122,7 +123,11 @@ const onInputChange = (settings = null) => {
     }
 
     try {
-        output = formatXml(value, options);
+        if (document.querySelector("input[name='formatterMode']:checked").value === "Minify") {
+            output = formatXml.minify(value, options);
+        } else {
+            output = formatXml(value, options);
+        }
         xmlOutput.classList.remove("is-invalid")
 
     } catch {
