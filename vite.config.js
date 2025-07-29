@@ -17,6 +17,7 @@ export default {
             input: {
                 main: resolve(__dirname, 'index.html'),
                 xml: resolve(__dirname, 'xml/index.html'),
+                json: resolve(__dirname, 'json/index.html'),
             },
         },
     },

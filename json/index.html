@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>quick-JSON-lint</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/src/scss/styles.scss">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-xxl">
+    <a href="/" class="navbar-brand">quicklint</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a href="/xml/" class="nav-link">XML</a></li>
+        <li class="nav-item"><a href="/json/" aria-current="page" class="nav-link active">JSON</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container-xxl mb-3">
+  <h1>quick-JSON-lint</h1>
+  <div class="row mb-3">
+    <div class="col mb-3 flex-grow-1 flex-shrink-0">
+      <label for="json-input" class="form-label">Input</label>
+      <textarea class="resize font-monospace form-control" autocomplete="off" autocapitalize="off" name="json-input" id="json-input" cols="30" rows="10"></textarea>
+    </div>
+    <div class="col mb-3 flex-grow-1 flex-shrink-1">
+      <label for="json-output" class="form-label">Output</label>
+      <textarea class="noresize font-monospace form-control" readonly name="json-output" id="json-output" cols="30" rows="10"></textarea>
+    </div>
+  </div>
+
+  <div class="card mb-3">
+    <div class="card-header">
+      <i id="settingsIcon" class="bi bi-hourglass-split"></i> Settings
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-auto">
+          <h4>Indentation</h4>
+          <div class="mb-1">
+            <div class="form-check-inline">
+              <input type="radio" name="indentationType" id="indentationTypeTabs"
+                     class="form-check-input" value="tabs" />
+              <label for="indentationTypeTabs" class="form-check-label">Tabs</label>
+            </div>
+            <div class="form-check-inline">
+              <input type="radio" name="indentationType" id="indentationTypeSpaces"
+                     class="form-check-input" value="spaces" />
+              <label for="indentationTypeSpaces" class="form-check-label">Spaces</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="indentationNumber" class="form-label">Indentation amount</label>
+            <input disabled type="number" name="indentationNumber" id="indentationNumber" value="4" class="form-control" />
+          </div>
+        </div>
+        <div class="col-auto">
+          <h4>Other</h4>
+        </div>
+        <div class="col-auto">
+          <h4>Mode</h4>
+          <div class="mb-3">
+            <input type="radio" class="btn-check" name="formatterMode" id="formatterModePrettify" autocomplete="off" checked>
+            <label class="btn btn-secondary" for="formatterModePrettify">Beautify</label>
+
+            <input type="radio" class="btn-check" name="formatterMode" value="Minify" id="formatterModeMinify" autocomplete="off">
+            <label class="btn btn-secondary" for="formatterModeMinify">Minify</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-3">
+    <div class="card-header">
+      <i class="bi bi-exclamation-octagon-fill"></i> Errors
+      <span id="errorCount" class="badge text-bg-danger"></span>
+    </div>
+    <ul class="list-group list-group-flush" id="errorList">
+    </ul>
+  </div>
+
+  <footer>
+    <p><a href="https://github.com/byemc/quicklint.dev">source code</a></p>
+  </footer>
+</main>
+
+<script type="module" src="/src/js/common.js"></script>
+<script type="module" src="./json.js"></script>
+
+</body>
+</html>

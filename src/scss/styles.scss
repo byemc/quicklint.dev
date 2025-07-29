@@ -1,5 +1,21 @@
 
 $bootstrap-icons-font-dir: "../../node_modules/bootstrap-icons/font/fonts";
+$primary: #77b19d;
+
+textarea {
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: scroll;
+}
+
+.noresize {
+  resize: none;
+}
+
+.resize {
+  resize: horizontal;
+  margin-right: 0 !important;
+}
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap-icons/font/bootstrap-icons";
